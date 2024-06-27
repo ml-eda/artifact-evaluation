@@ -1,8 +1,6 @@
-[ [Back to index](https://cTuning.org/ae) ]
-
 # Artifact evaluation
 
-This document provides the guidelines to evaluate artifacts at ACM and IEEE conferences.
+This document provides the guidelines for evaluating artifacts at the ACM/IEEE International Symposium on Machine Learning for CAD based on the [ACM artifact review and badging policies](https://www.acm.org/publications/policies/artifact-review-and-badging-current). This artifact evaluation repository is derived and inspired by the [artifact evaluation standards](https://github.com/mlcommons/ck/tree/master/docs/artifact-evaluation) set by the MLCommons. 
 
 ## Overview
 
@@ -11,29 +9,28 @@ will bid on artifacts they would like to evaluate based on their competencies
 and the information provided in the artifact abstract such as software and hardware dependencies
 while avoiding possible conflicts of interest.
 
-Within a few days, the AE chairs will make the final selection of evaluators
+Within a few days, the AE chair will make the final selection of evaluators
 to ensure at least two or more evaluators per artifact.
 
-Evaluators will then have approximately 1 months to review artifacts via HotCRP,
+Evaluators will then have approximately 2 weeks to review artifacts submitted via TBD,
 discuss with the authors about all encountered issues and help them fix all the issues.
 Remember that our philosophy of artifact evaluation is not to fail problematic artifacts 
-but to help the authors improve their public artifacts, pass evaluation
-and improve their Artifact Appendix.
+but to help the authors improve their public artifacts, pass the evaluation
+and strengthen their Artifact Appendix.
 
-In the end, the AE chairs will decide on a set of the standard ACM reproducibility badges (see below)
+In the end, the AE commitee and chairs will decide on a set of standard ACM reproducibility badges (see below)
 to award to a given artifact based on all reviews and the authors' responses.
 Such badges will be printed on the 1st page of the paper and will be available 
 as meta information in the [ACM Digital Library](https://dl.acm.org)
 
 Authors and reviewers are encouraged to check the [AE FAQ](faq.md)
-and contact chairs and the community via our [Discord server for automation and reproducibility](https://discord.gg/JjWNWXKxwT) 
-or the [dedicated AE google group](https://groups.google.com/forum/#!forum/artifact-evaluation)
+and contact chairs and the community via  TBD
 in case of questions or suggestions.
 
 
 ## ACM reproducibility badges
 
-Reviewers must read a paper and then thoroughly go through the Artifact Appendix 
+Reviewers must read the paper and then thoroughly go through the Artifact Appendix 
 to evaluate shared artifacts. They should then describe their experience 
 at each stage (success or failure, encountered problems and how they were possibly solved, 
 and questions or suggestions to the authors), and give a score on scale -1 .. +1:
@@ -42,11 +39,7 @@ and questions or suggestions to the authors), and give a score on scale -1 .. +1
 - *0* if met expectations (or inapplicable)
 - *-1* if fell below expectations
 
-### Artifacts available
-
-* Are all artifacts related to this paper publicly available?
-
-*Note that it is not obligatory to make artifacts publicly available!*
+### Artifacts available badge
 
 ![](https://www.acm.org/binaries/content/gallery/acm/publications/replication-badges/artifacts_available_dl.jpg)
 
@@ -73,85 +66,52 @@ A DOI will be then assigned to their artifacts and must be provided in the Artif
   and use GitHub or any other convenient way to access their artifacts 
   during AE.
 
+#### ML-EDA-specific additional review criteria:
 
-### Artifacts functional
+* Are all artifacts related to this paper publicly available?
+  
 
-* Are all components relevant to evaluation included in the package? 
-* Well documented? Enough to understand, install and evaluate artifact?
-* Exercisable? Includes scripts and/or software to perform appropriate experiments and generate results?
-* Consistent? Artifacts are relevant to the associated paper and contribute in some inherent way to the generation of its main results?
+### Artifacts functional badge
 
 ![](https://www.acm.org/binaries/content/gallery/acm/publications/replication-badges/artifacts_evaluated_functional_dl.jpg)
+This badge is applied to papers whose associated artifacts have completed an independent audit. Artifacts need not be made publicly available to be considered for this badge. However, they do need to be made available to reviewers. 
 
-*Note that proprietary artifacts need not be included. If they are required
-to exercise the package then this should be documented, along with instructions
-on how to obtain them. Proxies for proprietary data should be included so as to
-demonstrate the analysis.*
+The artifacts associated with the research are found to be documented, consistent, complete, exercisable, and include appropriate evidence of verification and validation.
 
-The artifacts associated with the paper will receive an 
-"Artifacts Evaluated - Functional" badge *only if* they are found to be documented, consistent,
-complete, exercisable, and include appropriate evidence of verification and validation.
+* Documented: At a minimum, an inventory of artifacts is included, and sufficient description is provided to enable the artifacts to be exercised.
 
-We usually ask the authors to provide a small/sample data set to validate at least
-some results from the paper to make sure that their artifact is functional.
+* Consistent: The artifacts are relevant to the associated paper, and contribute in some inherent way to the generation of its main results.
+
+* Complete: To the extent possible, all components relevant to the paper in question are included. (Proprietary artifacts need not be included. If they are required to exercise the package then this should be documented, along with instructions on how to obtain them. Proxies for proprietary data should be included so as to demonstrate the analysis.)
+
+* Exercisable: Included scripts and/or software used to generate the results in the associated paper can be successfully executed, and included data can be accessed and appropriately manipulated.
+
+#### ML-EDA-specific review criteria
+
+* Are all components relevant to evaluation included in the package?
+* Data and benchmarks used for the paper must be available in the artifact. If they are proprietary, suitable proxies must be provided that demonstrate the key findings of the papers. For example, if the paper leverages industry testcases (proprietary designs or PDKs), the same methodology must be shown on some non-proprietary testcases made available to the reviewers.
+* If proprietary tools (e.g., commercial EDA tools) are required, the artifact must contain documentation (name of the tool, version) and scripts (e.g., commercial tool TCL) to obtain it. Alternatively, the paper can demonstrate its key takeaways and findings using proxy/non-proprietary tools.
+* The evaluation will consider the practicality of validation of the results given the limitations in computing and time.  For example, the artifact can include training scripts which begin on a pretrained model or provide scripts for pretrained models to perform inference.
+* Reviewers should report any unexpected artifact behavior to the authors (depends on the type of artifact such as unexpected output, scalability issues, crashes, performance variation, etc).
+  
 
 ### Results reproduced
 
-* Was it possible to validate the key results from the paper using provided artifacts? 
-
 ![](https://www.acm.org/binaries/content/gallery/acm/publications/replication-badges/results_reproduced_dl.jpg)
-
-*You should report any unexpected artifact behavior to the authors (depends on the type of artifact such as unexpected output, scalability issues, crashes, performance variation, etc).*
 
 The artifacts associated with the paper will receive a "Results reproduced" badge *only if* the key results 
 of the paper have been obtained in a subsequent study by a person or team other than the authors, using 
-artifacts provided by the author.
+artifacts provided by the author. Some variation of empirical and numerical results is tolerated.
 
-Some variation of empirical and numerical results is tolerated.
-In fact it is often unavoidable in computer systems research - see
-"how to report and compare empirical results" in the
-[AE FAQ](faq.md) page,  the [SIGPLAN Empirical Evaluation Guidelines](https://www.sigplan.org/Resources/EmpiricalEvaluation),
-and the [NeurIPS reproducibility checklist](https://www.cs.mcgill.ca/~jpineau/ReproducibilityChecklist.pdf).
-
-*Since it may take weeks and even months to rerun some complex experiments 
- such as deep learning model training, we are discussing a staged AE where we will first validate that
- artifacts are functional before the camera ready paper deadline, and then
- use a separate AE with the full validation of all experimental results 
- with open reviewing and without strict deadlines. We successfully validated
- a similar approach at the [MLCommons open reproducibility and optimization challenges)](https://access.cKnowledge.org)
- and there is a related initiative at the [NeurIPS conference](https://openreview.net/group?id=NeurIPS.cc/2019/Reproducibility_Challenge).*
-
-### Artifacts reusable (pilot project with MLCommons)
-
-Since the criteria for the ACM "Artifacts Evaluated – Reusable" badge are very vague, we have partnered with
-[MLCommons](https://mlcommons.org) to add their [unified and technology-agnostic Collective Mind automation interface (MLCommons CM)](https://doi.org/10.5281/zenodo.8105339)
-to the shared artifacts.
-
-This non-intrusive interface was successfully validated to automate and unify the [Student Cluster Competition at SuperComputing'22](https://github.com/mlcommons/ck/blob/master/docs/tutorials/sc22-scc-mlperf.md)
-and diverse [MLPerf benchmark community submissions and recent research papers](https://access.cknowledge.org/playground).
-
-That is why we would like to test it as a possible criteria to obtain the ACM "Artifacts Evaluated – Reusable" badge.
-
-Our goal is to help the community access diverse research projects, reproduce results and reuse artifacts
-in a unified and automated way across continuously evolving software and hardware.
-
-*Note that it will be possible to prepare and run experiments without this interface too.*
-
-The authors will get free help from MLCommons and the community via the [public Discord server](https://discord.gg/JjWNWXKxwT)
-and/or can try to add the MLCommons CM interface to their artifacts themselves using this [https://github.com/mlcommons/ck/blob/master/docs/tutorials/common-interface-to-reproduce-research-projects.mdtutorial).
+For this badge, a peer-reviewed publication which reports the replication or reproduction must be submitted as evidence, and if awarded, the badge will contain a link to this paper.
 
 
+#### ML-EDA-specific Review Criteria
+MLCAD2024 is NOT awarding this badge. MLCAD will consider awarding this in the future as this requires a separate peer evaluation process and is after the publication of the paper. 
 
 
-## Distinguished artifact award
+## Distinguished artifact award for open-source artifacts
 
-When arranged by the event, an artifact can receive a distinguished artifact award if it is functional, well-documented, portable, easily reproducible and reusable by the community.
+MLCAD2024 will provide a distinguished artifact award for being completely open-source, functional, well-documented, portable, and easily usable by the community.
 
 ----
-
-*This document was prepared by [Grigori Fursin](https://cKnowledge.org/gfursin)
- with contributions from [Bruce Childers](https://people.cs.pitt.edu/~childers), 
- [Michael Heroux](https://www.sandia.gov/~maherou), 
- [Michela Taufer](https://gcl.cis.udel.edu/personal/taufer) and others.
- It is maintained by the [cTuning foundation](https://cTuning.org/ae) and the 
- [open MLCommons taskforce on automation and reproducibility](https://github.com/mlcommons/ck/blob/master/docs/taskforce.md).*
