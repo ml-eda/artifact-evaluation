@@ -2,14 +2,12 @@
 
 # Artifact submission
 
-This document provides the guidelines to submit your artifacts for evaluation at ACM and IEEE conferences.
-
+This document provides the guidelines to submit your artifacts for evaluation at MLCAD.
 
 
 ## Motivation
 
-
-It's becoming increasingly difficult to [reproduce results from CS papers](https://learning.acm.org/techtalks/reproducibility). 
+It's becoming increasingly difficult to reproduce results from ML EDA papers. 
 Voluntarily Artifact Evaluation (AE) was successfully introduced
 at program languages, systems and machine learning conferences and tournaments 
 to validate experimental results by the independent AE Committee, share unified Artifact Appendices, 
@@ -35,34 +33,21 @@ Reviewers will then collaborate with the authors to evaluate their artifacts and
 
 
 You need to prepare the [Artifact Appendix](https://github.com/mlcommons/ck/blob/master/docs/artifact-evaluation/template/ae.tex)
-describing all software, hardware and data set dependencies, key results to be reproduced, and how to prepare, run and validated experiments.
+describing all software, hardware, and data set dependencies, key results to be reproduced, and how to prepare, run, and validate experiments.
 
-Though it is relatively intuitive and based on our 
-[past AE experience and your feedback](https://cTuning.org/ae/prior_ae.html), 
-we strongly encourage you to check the 
+We strongly encourage you to check the 
 the [Artifact Appendix guide](checklist.md),
 [artifact reviewing guide](reviewing.md),
-the [SIGPLAN Empirical Evaluation Guidelines](https://www.sigplan.org/Resources/EmpiricalEvaluation),
-the [NeurIPS reproducibility checklist](https://www.cs.mcgill.ca/~jpineau/ReproducibilityChecklist.pdf)
 and [AE FAQs](faq.md) before submitting artifacts for evaluation!
 
 You can find the examples of Artifact Appendices 
 in the following [reproduced papers](https://cknow.io/reproduced-papers).
 
- 
-*Since the AE methodology is slightly different at different conferences, we introduced the unified Artifact Appendix
- with the Reproducibility Checklist in 2014 to help readers understand what was evaluated and how! 
- Furthermore, artifact evaluation often helps to discover some minor mistakes in accepted papers -
- in such case you have a chance to add related notes and corrections
- in the Artifact Appendix of your camera-ready paper!*
-
-
 
 ## Preparing your experimental workflow
 
-
 **You can skip this step if you want to share your artifacts without the validation of experimental results - 
- in such case your paper can still be entitled for the "artifact available" badge!**
+ in such case, your paper can still be entitled to the "artifact available" badge!**
 
 We strongly recommend you to provide at least some automation scripts to build your workflow, 
 all inputs to run your workflow, and some expected outputs to validate results from your paper.
@@ -71,17 +56,14 @@ using README files or [Jupyter Notebooks](https://jupyter.org "https://jupyter.o
 
 Feel free to reuse [portable CM scripts](https://github.com/mlcommons/ck/tree/master/cm-mlops/script) 
 being developed by the MLCommons to automate common steps to prepare and run various benchmarks 
-across continously changing software, hardware and data.
+across continuously changing software, hardware, and data.
 
 
 ## Making artifacts available to evaluators
 
-
 Most of the time, the authors make their artifacts available to the evaluators via GitHub,
 GitLab, BitBucket or private repositories. Public artifact sharing allows
-optional "open evaluation" which we have successfully validated at [ADAPT'16]( https://adapt-workshop.org)
-and [ASPLOS-REQUEST'18](https://cknow.io/c/event/request-reproducible-benchmarking-tournament).
-It allows the authors to quickly fix encountered issues during evaluation
+optional "open evaluation". It allows the authors to quickly fix encountered issues during evaluation
 before submitting the final version to archival repositories.
 
 
@@ -91,11 +73,11 @@ Other acceptable methods include:
 * Using [Docker](https://www.docker.com "https://www.docker.com"), [Virtual Box](https://www.virtualbox.org "https://www.virtualbox.org") and other containers and VM images.
 * Arranging remote access to the authors' machine with the pre-installed software 
  - this is an exceptional cases when rare or proprietary software and hardware is used.
- You will need to privately send the private access information to the AE chairs.
+ You will need to send the private access information to the AE chairs privately.
 
 
 Note that your artifacts will receive the ACM "artifact available" badge
-**only if** they have been placed on any publicly accessible archival repository
+**only if** they have also been placed on any publicly accessible archival repository
 such as [Zenodo](https://zenodo.org "https://zenodo.org"), [FigShare](https://figshare.com "https://figshare.com"),
 and [Dryad](http://datadryad.org "http://datadryad.org"). 
 You will need to provide a DOI automatically assigned to your artifact by these repositories 
@@ -103,24 +85,15 @@ in your final Artifact Appendix!
 
 
 
-
-
 ## Submitting artifacts
-
-
-
-
 Write a brief abstract describing your artifact, the minimal hardware and software requirements, 
 how it supports your paper, how it can be validated and what the expected result is. 
-Do not forget to specify if you use any proprietary software or hardware!
+Do not forget to specify if you use any proprietary software or hardware! The amount of compute resources needed for training.  See the details in the artifact evaluation template. 
+
 This abstract will be used by evaluators during artifact bidding to make sure that
 they have an access to appropriate hardware and software and have required skills.
-
-
 Submit the artifact abstract and the PDF of your paper with the Artifact Appendix attached 
 using the AE submission website provided by the event.
-
-
 
 
 
@@ -128,10 +101,7 @@ using the AE submission website provided by the event.
 ## Asking questions
 
  If you have questions or suggestions, 
- do not hesitate to get in touch with the the AE chairs or the community using 
- the public [Discord server](https://discord.gg/JjWNWXKxwT),
- [Artifact Evaluation google group](https://groups.google.com/forum/#!forum/artifact-evaluation)
- and weekly conf-calls of the [open MLCommons taskforce on automation and reproducibility](https://github.com/mlcommons/ck/blob/master/docs/taskforce.md).
+ do not hesitate to get in touch with the the AE chairs via email (vachhabr at asu.edu).
 
 ## Preparing your camera-ready paper
 
@@ -149,10 +119,7 @@ In other cases, AE chairs will tell you how to add stamps to the first page of y
 
 
 
-
 ## Examples of reproduced papers with shared artifacts and Artifact Appendices:
-
-
 
 * [Some papers from the past AE](https://cknow.io/?q=%22reproduced-papers%22) (ASPLOS, MICRO, MLSys, Supercomputing, CGO, PPoPP, PACT, IA3, ReQuEST)
 * [Dashboards with reproduced results](https://cknow.io/?q=%22reproduced-results%22)
@@ -166,8 +133,6 @@ In other cases, AE chairs will tell you how to add stamps to the first page of y
 * Paper "Software Prefetching for Indirect Memory Accesses" from CGO'17  
   * [Portable automation at GitHub](https://github.com/SamAinsworth/reproduce-cgo2017-paper)
   * [CK dashboard snapshot](https://github.com/SamAinsworth/reproduce-cgo2017-paper/files/618737/ck-aarch64-dashboard.pdf)
-
-
 
 
 ----
