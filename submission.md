@@ -31,7 +31,7 @@ Reviewers will then collaborate with the authors to evaluate their artifacts and
 ## Preparing your Artifact Appendix and the Reproducibility Checklist
 
 
-You need to prepare the [Artifact Appendix](https://github.com/mlcommons/ck/blob/master/docs/artifact-evaluation/template/ae.tex)
+You need to prepare the [Artifact Appendix](https://github.com/ml-eda/artifact-evaluation/blob/upstream-ae/template/ae.tex)
 describing all software, hardware, and data set dependencies, key results to be reproduced, and how to prepare, run, and validate experiments.
 
 We strongly encourage you to check the 
