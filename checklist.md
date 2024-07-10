@@ -30,17 +30,7 @@ for artifact evaluation while avoiding common pitfalls.
 
  
 * **Algorithm:** Are you presenting a new algorithm?
-* **Program:** Which benchmarks do you use 
- ([PARSEC](http://parsec.cs.princeton.edu "http://parsec.cs.princeton.edu"),
- [NAS](http://www.nas.nasa.gov/publications/npb.html "http://www.nas.nasa.gov/publications/npb.html"),
- [EEMBC](https://www.eembc.org "https://www.eembc.org"),
- [SPLASH](http://www.capsl.udel.edu/splash/index.html "http://www.capsl.udel.edu/splash/index.html"),
- [Rodinia](https://www.cs.virginia.edu/~skadron/wiki/rodinia "https://www.cs.virginia.edu/~skadron/wiki/rodinia"),
- [LINPACK](http://www.netlib.org/linpack "http://www.netlib.org/linpack"),
- [HPCG](http://hpcg-benchmark.org/ "http://hpcg-benchmark.org/"),
- [MiBench](http://wwweb.eecs.umich.edu/mibench "http://wwweb.eecs.umich.edu/mibench"),
- [SPEC](https://www.spec.org/cpu2006 "https://www.spec.org/cpu2006"),
- [cTuning](http://github.com/ctuning/ctuning-programs "http://github.com/ctuning/ctuning-programs"), etc)? 
+* **Program:** Which benchmarks do you use? (e.g., ISCAS-85, Open-cores RTL, etc.) 
  Are they included or should they be downloaded? Which version?
  Are they public or private? If they are private,  is there a public analog to evaluate your artifact?
  What is the approximate size?
