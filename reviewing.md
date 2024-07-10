@@ -91,8 +91,8 @@ The artifacts associated with the research are found to be documented, consisten
 * Are all components relevant to evaluation included in the package?
 * Data and benchmarks used for the paper must be available in the artifact. If they are proprietary, suitable proxies must be provided that demonstrate the key findings of the papers. For example, if the paper leverages industry testcases (proprietary designs or PDKs), the same methodology must be shown on some non-proprietary testcases made available to the reviewers.
 * If proprietary tools (e.g., commercial EDA tools) are required, the artifact must contain documentation (name of the tool, version) and scripts (e.g., commercial tool TCL) to obtain it. Alternatively, the paper can demonstrate its key takeaways and findings using proxy/non-proprietary tools.
-* The evaluation will consider the practicality of validation of the results given the limitations in computing and time.  For example, the artifact can include training scripts which begin on a pretrained model or provide scripts for pretrained models to perform inference.
-* Reviewers should report any unexpected artifact behavior to the authors (depends on the type of artifact such as unexpected output, scalability issues, crashes, performance variation, etc).
+* The evaluation will consider the practicality of validating the results given the limitations in computing and time.  For example, the artifact can include training scripts that begin on a pretrained model or provide scripts for pretrained models to perform inference.
+* Reviewers should report any unexpected artifact behavior to the authors (depending on the type of artifact, such as unexpected output, scalability issues, crashes, performance variation, etc).
   
 
 ### Results reproduced
