@@ -140,5 +140,4 @@ In other cases, AE chairs will tell you how to add stamps to the first page of y
  with contributions from [Bruce Childers](https://people.cs.pitt.edu/~childers "https://people.cs.pitt.edu/~childers"), 
  [Michael Heroux](https://www.sandia.gov/~maherou "https://www.sandia.gov/~maherou"), 
  [Michela Taufer](https://gcl.cis.udel.edu/personal/taufer/ "https://gcl.cis.udel.edu/personal/taufer/") and others.
- It is maintained by the [cTuning foundation](https://cTuning.org/ae) and the 
- [open MLCommons taskforce on automation and reproducibility](https://github.com/mlcommons/ck/blob/master/docs/mlperf-education-workgroup.md).*
+ It is tailored to suit the ML EDA Community.*
