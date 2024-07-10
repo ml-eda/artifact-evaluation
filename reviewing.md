@@ -74,6 +74,7 @@ A DOI will be then assigned to their artifacts and must be provided in the Artif
 ### Artifacts functional badge
 
 ![](https://www.acm.org/binaries/content/gallery/acm/publications/replication-badges/artifacts_evaluated_functional_dl.jpg)
+
 This badge is applied to papers whose associated artifacts have completed an independent audit. Artifacts need not be made publicly available to be considered for this badge. However, they do need to be made available to reviewers. 
 
 The artifacts associated with the research are found to be documented, consistent, complete, exercisable, and include appropriate evidence of verification and validation.
