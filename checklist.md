@@ -1,20 +1,15 @@
-[ [Back to index](https://cTuning.org/ae) ]
-
 # Artifact Checklist
 
 
-Here we provide a few informal suggestions to help you fill in the 
+Here, we provide a few informal suggestions to help you fill in the abstract template.
 [Unified Artifact Appendix with the Reproducibility Checklist](https://github.com/mlcommons/ck/blob/master/docs/artifact-evaluation/template/ae.tex) 
 for artifact evaluation while avoiding common pitfalls. 
-We've introduced this appendix to [unify the description of experimental setups and results across different conferences](https://learning.acm.org/techtalks/reproducibility).
-
-
 
 
 ## Abstract
 
  Briefly and informally describe your artifacts including minimal hardware, software and other requirements, 
- how they support your paper and what are they key results to be reproduced.
+ how they support your paper, and what are the key results to be reproduced.
  Note that evaluators will use artifact abstracts to bid on artifacts.
  The AE chairs will also use it to finalize artifact assignments.
 
@@ -22,15 +17,15 @@ We've introduced this appendix to [unify the description of experimental setups 
 ## Checklist
 
 
- Together with the artifact abstract, this check-list will help us make sure that evaluators 
- have appropriate competency and an access to the technology required to evaluate your artifacts. 
+ Together with the artifact abstract, this checklist will help us make sure that evaluators 
+ have appropriate competency and access to the technology required to evaluate your artifacts. 
  It can also be used as meta information to find your artifacts in Digital Libraries.
 
  ![](https://raw.githubusercontent.com/mlcommons/ck/master/docs/artifact-evaluation/image-general-workflow1.png)
   
 
  Fill in whatever is applicable with some informal keywords and remove unrelated items 
- (please consider questions below just as informal hints
+ (please consider the questions below just as informal hints
  that reviewers are usually concerned about):
 
  
@@ -47,9 +42,9 @@ We've introduced this appendix to [unify the description of experimental setups 
  [SPEC](https://www.spec.org/cpu2006 "https://www.spec.org/cpu2006"),
  [cTuning](http://github.com/ctuning/ctuning-programs "http://github.com/ctuning/ctuning-programs"), etc)? 
  Are they included or should they be downloaded? Which version?
- Are they public or private? If they are private, 
- is there a public analog to evaluate your artifact?
+ Are they public or private? If they are private,  is there a public analog to evaluate your artifact?
  What is the approximate size?
+* **EDA Tools:** If you use proprietary EDA tools, which ones? Have you provided scripts to run these tools?
 * **Compilation:** Do you require a specific compiler? Public/private? Is it included? Which version?
 * **Transformations:** Do you require a program transformation tool (source-to-source, binary-to-binary, compiler pass, etc)? 
  Public/private? Is it included? Which version?
@@ -133,9 +128,7 @@ Describe the way how reviewers will access your artifacts:
 
 ### Software dependencies
 
-
-
- Describe any specific OS and software packages required to evaluate your
+ Describe any specific OS, EDA tools, and software packages required to evaluate your
  artifact. This is particularly important if you share your source code 
  and it must be compiled or if you rely on some proprietary software that you
  can not include to your package. In such case, we strongly suggest you 
@@ -143,10 +136,7 @@ Describe the way how reviewers will access your artifacts:
  and models.
 
    
-  
 
-*Note that we are trying to obtain AE licenses for some commonly used proprietary tools 
-and benchmarks - you will be informed in case of positive outcome.*
 
 ### Data sets
 
@@ -186,8 +176,6 @@ and benchmarks - you will be informed in case of positive outcome.*
  Describe the experimental workflow and how it is implemented
  and executed, i.e. some OS scripts, 
  [IPython/Jupyter notebook](https://jupyter.org "https://jupyter.org"), 
- [MLCommons CM automation language](https://github.com/mlcommons/ck/tree/master/docs), etc.
-
  Check [examples of reproduced papers](https://cknow.io/reproduced-papers "https://cknow.io/reproduced-papers").
   
 
@@ -195,21 +183,13 @@ and benchmarks - you will be informed in case of positive outcome.*
 
 
 ## Evaluation and expected result
-
-
-
+ 
  Describe all the steps necessary to reproduce the key results from your paper. 
- Describe expected results including maximum allowable variation
+ Describe expected results, including maximum allowable variation
  of empirical results.
- See the [SIGPLAN Empirical Evaluation Guidelines](https://www.sigplan.org/Resources/EmpiricalEvaluation "https://www.sigplan.org/Resources/EmpiricalEvaluation"),
- the [NeurIPS reproducibility checklist](https://www.cs.mcgill.ca/~jpineau/ReproducibilityChecklist.pdf "https://www.cs.mcgill.ca/~jpineau/ReproducibilityChecklist.pdf")
- and the [AE FAQ](faq.md) for more details.
-
 
 
 ## Experiment customization
-
-
 
  It is optional but can be useful for the community if you describe all the knobs
  to customize and tune your experiments and maybe even trying them
@@ -218,20 +198,10 @@ and benchmarks - you will be informed in case of positive outcome.*
  run-time systems) and hardware.
 
 
-## Reusability
-
-Please describe your experience if you decided to participate in our pilot project to add 
-the non-intrusive [MLCommons Collective Mind interface (CM)](https://doi.org/10.5281/zenodo.8105339)
-to your artifacts. Note that it will be possible to prepare and run your experiments with 
-or without this interface!
 
 
 
-## Notes
 
-
-
- You can add informal notes to draw the attention of evaluators.
 
 
 
