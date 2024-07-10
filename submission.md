@@ -1,4 +1,3 @@
-[ [Back to index](https://cTuning.org/ae) ]
 
 # Artifact submission
 
