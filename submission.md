@@ -86,13 +86,12 @@ in your final Artifact Appendix!
 
 ## Submitting artifacts
 Write a brief abstract describing your artifact, the minimal hardware and software requirements, 
-how it supports your paper, how it can be validated and what the expected result is. 
-Do not forget to specify if you use any proprietary software or hardware! The amount of compute resources needed for training.  See the details in the artifact evaluation template. 
+how it supports your paper, how it can be validated and what the expected result is. The template for the abstract is available in this repository [here](https://github.com/ml-eda/artifact-evaluation/tree/main/template).   Do not forget to specify if you use any proprietary software or hardware! The amount of compute resources needed for training. 
 
 This abstract will be used by evaluators during artifact bidding to make sure that
 they have an access to appropriate hardware and software and have required skills.
 Submit the artifact abstract and the PDF of your paper with the Artifact Appendix attached 
-using the AE submission website provided by the event.
+using the AE submission website provided by MLCAD.
 
 
 
