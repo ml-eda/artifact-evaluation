@@ -4,7 +4,7 @@
 
 [Available badge](acm_badges/artifacts_available_v1.1.pdf)
 
-[Functional badge](acm_badges/artifacts_functional_v1.1.pdf)
+[Functional badge](acm_badges/artifacts_evaluated_functional_v1.1.pdf)
 
 ### Step 2. Include the TikZ and Background packages.
     \usepackage{tikz}
@@ -24,4 +24,4 @@
     \BgThispage
 
 ### Example on how the badges should appear in your paper
-[](example_acm_badges_in_paper.png)
+![](example_acm_badges_in_paper.png)
