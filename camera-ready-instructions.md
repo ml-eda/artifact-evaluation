@@ -1,7 +1,9 @@
-# Instrcutions for including badges in your camera-ready paper for MLCAD2024
+# Including badges in your camera-ready paper MLCAD2024
 
 ### Step 1. Download the PDF badges from below and add it to your latex folder
+
 [Available badge](acm_badges/artifacts_available_v1.1.pdf)
+
 [Functional badge](acm_badges/artifacts_functional_v1.1.pdf)
 
 ### Step 2. Include the TikZ and Background packages.
@@ -22,4 +24,4 @@
     \BgThispage
 
 ### Example on how the badges should appear in your paper
-[](acm_badges/example_acm_badges_in_paper.png)
+[](example_acm_badges_in_paper.png)
