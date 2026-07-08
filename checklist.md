@@ -72,7 +72,7 @@ for artifact evaluation while avoiding common pitfalls.
 * **Publicly available?:** Will your artifact be publicly available? If yes, we may spend an extra effort to help you with the documentation.
 * **Code licenses (if publicly available)?:** If your workflows and artifacts will be publicly available, please provide information about licenses.
  This will help the community to reuse your components.
-* **Data/model licenses (if publicly available)?:** If your data sets or models will be publicly available, please provide information about licenses and usage restrictions.
+* **Data/model licenses and usage restrictions (if applicable):** If your data sets or models are included, archived, downloaded, or accessed through an external provider, please provide information about licenses and usage restrictions.
 * **Workflow frameworks used?** Did authors use any workflow framework which can automate and customize experiments?
 * **Zenodo DOI:**
  Note that the author-created artifacts relevant to this paper

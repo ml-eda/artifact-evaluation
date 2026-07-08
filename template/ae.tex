@@ -36,23 +36,41 @@
 
 \subsection{Artifact check-list (meta-information)}
 
-{\em Obligatory. Use short keywords or one-line answers for the fields that
-apply to your artifact, and remove the rest. This information is used to assign
-appropriate reviewers. Detailed instructions can be placed in the artifact
-README.}
+{\em Obligatory. Use just a few informal keywords or one-line answers in all
+fields applicable to your artifacts and remove the rest. This information is
+needed to find appropriate reviewers and to gradually unify artifact meta
+information in Digital Libraries. Detailed instructions can be placed in the
+artifact README.}
 
 {\small
 \begin{itemize}
-  \item {\bf Algorithm or method: }
-  \item {\bf Programs, benchmarks, and data sets: }
-  \item {\bf Models and model availability: }
-  \item {\bf Compilation, binaries, tools, proprietary software, and PDKs: }
-  \item {\bf Run-time environment, hardware, and run-time state: }
+  \item {\bf Algorithm: }
+  \item {\bf Program: }
+  \item {\bf Compilation: }
+  \item {\bf Transformations: }
+  \item {\bf Binary: }
+  \item {\bf Model: }
+  \item {\bf Model availability and access: }
+  \item {\bf LLM prompts and inference settings: }
+  \item {\bf Data set: }
+  \item {\bf Run-time environment: }
   \item {\bf Container, VM, or locked environment: }
-  \item {\bf Workflow framework and execution: }
-  \item {\bf Metrics, outputs, and tolerances: }
-  \item {\bf Preparation/runtime, disk space, GPU/API cost: }
-  \item {\bf Public availability, licenses, and restrictions: }
+  \item {\bf Hardware: }
+  \item {\bf Run-time state: }
+  \item {\bf Execution: }
+  \item {\bf Metrics: }
+  \item {\bf Output: }
+  \item {\bf Expected results and tolerances: }
+  \item {\bf Experiments: }
+  \item {\bf Proprietary EDA tools, PDKs, and licensed technology files: }
+  \item {\bf How much disk space required (approximately)?: }
+  \item {\bf How much time is needed to prepare workflow (approximately)?: }
+  \item {\bf How much time is needed to complete experiments (approximately)?: }
+  \item {\bf API cost or GPU-hours required (if applicable): }
+  \item {\bf Publicly available?: }
+  \item {\bf Code licenses (if publicly available)?: }
+  \item {\bf Data/model licenses and usage restrictions (if applicable): }
+  \item {\bf Workflow framework used?: }
   \item {\bf Zenodo DOI for archived artifact: }
 \end{itemize}
 }
@@ -64,29 +82,51 @@ README.}
 
 {\em Obligatory}
 
+Provide the review access path and the final Zenodo DOI if available. If large
+artifacts are hosted separately, identify the exact version or checksum used
+for artifact evaluation.
+
 \subsubsection{Hardware dependencies}
 
 \subsubsection{Software dependencies}
 
 \subsubsection{Commercial software and PDK dependencies}
 
+If applicable, list the exact tool, version, license assumptions, PDK or
+technology package, required files, setup or mount paths, environment variables,
+and smoke-test command. Do not include restricted installers, license files, or
+PDK contents unless redistribution is allowed.
+
 \subsubsection{Data sets}
+
+Describe included, downloaded, generated, or proprietary data sets, including
+versions, sizes, licenses or usage restrictions, and any public proxy data.
 
 \subsubsection{Models}
 
 For model-based artifacts, specify the exact model or API model, availability
-or access instructions, version/revision where applicable, and license. If LLMs
-materially affect the results, also summarize the prompts, inference settings,
-metrics, raw or cached outputs, tolerance bands, and expected API cost or
-local compute needed for validation.
+or access instructions, version/revision where applicable, and license or usage
+restrictions. For closed API models, include the provider, model ID, endpoint or
+service version if available, experiment date range, access assumptions, and
+known model-drift limitations. If LLMs materially affect the results, also
+summarize the prompts, inference settings, metrics, raw or cached outputs,
+tolerance bands, and expected API cost or local compute needed for validation.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Installation}
 
 {\em Obligatory}
 
+Describe how to build, load, or activate the Docker image, VM, locked
+environment, or package setup, and include a smoke test. If commercial tools or
+PDKs are outside the container, describe the required mounts and environment
+variables.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Experiment workflow}
+
+Map the provided scripts, notebooks, or workflow commands to the paper results
+they validate.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Evaluation and expected results}

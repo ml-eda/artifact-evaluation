@@ -67,8 +67,15 @@ For MLCAD 2026, the Zenodo record may archive a snapshot of the authors' GitHub 
   as the data from which the figures are drawn, or as complex as a complete
   software system under study.
 * The authors can provide the Zenodo DOI at the very end of the AE process
-  and use GitHub or any other convenient way to access their artifacts
-  during AE.
+  and use GitHub or any other convenient way to exchange fixes during AE.
+  For both the Artifacts Available and Artifacts Evaluated - Functional badges,
+  reviewers should download and evaluate the archived Zenodo artifact. The final
+  badge decision should be tied to the Zenodo snapshot, not to a mutable GitHub
+  branch or private upload.
+* The Zenodo record should include the reviewed artifact package or point to a
+  stable location for large runnable artifacts, such as Docker images, VM images,
+  model caches, generated outputs, and logs, with the exact version, release,
+  checksum, or filename used for AE.
 
 #### MLCAD-specific additional review criteria:
 
@@ -124,7 +131,7 @@ For commercial EDA tools, commercial/foundry PDKs, proprietary IP, or licensed t
 * setup instructions, tool/license/PDK verification commands, a smoke-test command, the full evaluation command or reviewer subset command, and expected reports/logs/metrics/tolerances,
 * whether an open-source proxy flow or open PDK is available when the commercial setup is not accessible.
 
-Reviewers should not be expected to install unspecified packages manually during AE. A Docker image, Dockerfile, Apptainer/Singularity image, VM, locked Conda environment, or equivalent locked environment should be provided whenever practical. Large runnable artifacts such as Docker images may be submitted through the private upload location shared by the AE chairs.
+Reviewers should not be expected to install unspecified packages manually during AE. A Docker image, Dockerfile, Apptainer/Singularity image, VM, locked Conda environment, or equivalent locked environment should be provided whenever practical. Large runnable artifacts such as Docker images may be submitted through the private upload location shared by the AE chairs. Commercial tools, PDKs, license files, and other restricted components usually cannot be included in the image, but authors should provide scripts, mount instructions, environment variables, and expected input/output paths so the containerized workflow can connect to externally installed tools or mounted PDK directories.
 
 #### Reviewer-side evaluation resources
 

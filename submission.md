@@ -59,6 +59,28 @@ and [AE FAQs](faq.md) before submitting artifacts for evaluation!
 You can find the examples of Artifact Appendices
 in the following [Artifact Appendix examples](https://cknow.io/reproduced-papers).
 
+Some checked MLCAD 2024 Artifact Appendices are also useful examples. These
+examples are historical; authors should still follow the current MLCAD 2026
+requirements above, including the Zenodo requirement for the Artifacts Available
+badge and the LLM-specific fields when applicable.
+
+* Paper "HLSFactory: A Framework Empowering High-Level Synthesis Datasets for Machine Learning and Beyond"
+  * [Paper DOI](https://doi.org/10.1145/3670474.3685961)
+  * [Artifact DOI](https://doi.org/10.5281/zenodo.12989544)
+  * [Source repository](https://github.com/sharc-lab/HLSFactory)
+  * [Artifact evaluation repository](https://github.com/sharc-lab/hlsfactory-artifact-eval)
+  * Useful as an example of a framework artifact with separate source, AE scripts, Zenodo archives, datasets, and commercial-tool disclosure.
+* Paper "AutoBench: Automatic Testbench Generation and Evaluation Using LLMs for HDL Design"
+  * [Paper DOI](https://doi.org/10.1145/3670474.3685956)
+  * [Artifact DOI](https://doi.org/10.5281/zenodo.13325723)
+  * [Artifact repository](https://github.com/AutoBench/AutoBench)
+  * Useful as a historical LLM artifact example with model/API use, metrics, generated outputs, and tolerance. MLCAD 2026 requires the more detailed LLM information listed above.
+* Paper "Efficient and Effective Neural Networks for Automatic Test Pattern Generation"
+  * [Paper DOI](https://doi.org/10.1145/3670474.3685939)
+  * [Artifact repository](https://github.com/lzzh97/NN-for-ATPG)
+  * [Program archive](https://doi.org/10.5281/zenodo.13218515)
+  * Useful as a compact example of Functional evaluation instructions that map scripts to paper tables and state expected output and tolerance.
+
 
 ## Preparing your experimental workflow
 
@@ -71,6 +93,8 @@ You can then describe the steps to evaluate your artifact
 using README files or [Jupyter Notebooks](https://jupyter.org "https://jupyter.org").
 
 For MLCAD 2026, authors should provide a Docker image or an equivalent locked environment when possible. The image or environment should have all non-licensed dependencies preinstalled so reviewers do not need to install unspecified packages during AE. Include the Dockerfile or build instructions, dependency versions, a smoke-test command, the full evaluation command or reviewer subset command, and expected outputs.
+
+Commercial EDA tools, commercial/foundry PDKs, license files, and proprietary technology files usually cannot be included in a Docker image or public archive. If your artifact depends on these components, provide scripts, mount paths, environment variables, and expected input/output directories so reviewers who already have access can connect the external tool or PDK setup to the provided workflow.
 
 If Docker is not suitable, authors may provide an Apptainer/Singularity image, VM image, locked Conda environment, module-based setup, or remote machine access. The setup instructions should be detailed enough that reviewers do not need to infer package names, versions, environment variables, model locations, dataset paths, or run commands.
 
@@ -103,6 +127,10 @@ Note that your artifacts will receive the ACM "artifact available" badge
 and the Zenodo DOI is provided in your final Artifact Appendix.
 
 The Zenodo record may archive a snapshot of the authors' GitHub repository. GitHub alone is not sufficient for the Artifacts Available badge because it does not provide the required Zenodo DOI.
+
+For both the Artifacts Available and Artifacts Evaluated - Functional badges, reviewers will download and evaluate the final Zenodo artifact. If a private upload location or GitHub repository is used to exchange fixes during AE, update the final Zenodo record so it matches the reviewed artifact.
+
+If large runnable artifacts such as Docker images, VM images, model caches, generated outputs, or logs are hosted outside Zenodo, the Zenodo record should point to the stable location and identify the exact version, release, checksum, or filename used for AE.
 
 Commercial EDA tools, licensed binaries, and commercial/foundry PDKs that cannot be publicly redistributed do not count as publicly available artifacts. Document such dependencies separately and provide public scripts, open proxies, logs, reports, or other evidence when possible.
 
