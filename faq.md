@@ -6,6 +6,7 @@
 * [Artifact evaluation](#artifact-evaluation)
   * [Frequently Asked Questions](#frequently-asked-questions)
     * [What is the difference between Repeatability, Reproducibility and Replicability?](#what-is-the-difference-between-repeatability-reproducibility-and-replicability?)
+    * [Which artifact badges are available for MLCAD 2026?](#which-artifact-badges-are-available-for-mlcad-2026?)
     * [Do I have to open source my software artifacts?](#do-i-have-to-open-source-my-software-artifacts?)
     * [Is Artifact evaluation blind or double-blind?](#is-artifact-evaluation-blind-or-double-blind?)
     * [How to pack artifacts?](#how-to-pack-artifacts?)
@@ -15,6 +16,7 @@
     * [Do I have to make my artifacts public if they pass evaluation?](#do-i-have-to-make-my-artifacts-public-if-they-pass-evaluation?)
     * [How to deal with numerical accuracy and instability?](#how-to-deal-with-numerical-accuracy-and-instability?)
     * [How to validate models or algorithm scalability?](#how-to-validate-models-or-algorithm-scalability?)
+    * [How should I document LLM-based artifacts?](#how-should-i-document-llm-based-artifacts?)
     * [Is there any page limit for my Artifact Evaluation Appendix?](#is-there-any-page-limit-for-my-artifact-evaluation-appendix?)
     * [Where can I find a sample HotCRP configuration to set up AE?](#where-can-i-find-a-sample-hotcrp-configuration-to-set-up-ae?)
   
@@ -24,8 +26,7 @@
 ## Frequently Asked Questions
 
 
-**If you have questions or suggestions which are not addressed here, please feel free 
-to contact vachhabr at asu.edu
+**If you have questions or suggestions which are not addressed here, please contact the AE chairs using the contact information provided in the acceptance notification or AE submission site.**
 
 ### What is the difference between Repeatability, Reproducibility and Replicability?
 
@@ -49,6 +50,14 @@ We use the following definitions [adopted by ACM and NISO](https://www.acm.org/p
   in a different location on multiple trials. For computational experiments, this means that an independent group 
   can obtain the same result using artifacts which they develop completely independently.
 
+
+### Which artifact badges are available for MLCAD 2026?
+
+The ACM artifact badging framework includes Artifacts Available, Artifacts Evaluated - Functional, and Results Reproduced. MLCAD 2026 will award only the Artifacts Available and Artifacts Evaluated - Functional badges. MLCAD 2026 will not award a Results Reproduced / Reproducible badge.
+
+The Artifacts Available badge requires a Zenodo DOI in the final Artifact Appendix. The Zenodo record may archive a snapshot of a GitHub repository, but a GitHub, GitLab, BitBucket, personal web page, shared drive, or private review upload alone is not sufficient for this badge.
+
+The Artifacts Evaluated - Functional badge requires that reviewers can exercise or validate the artifact and obtain similar results within the authors' declared tolerance. Exact bit-for-bit or text-identical reproduction is not required unless exact output is central to the paper's claim.
 
 
 ### Do I have to open source my software artifacts?
@@ -76,9 +85,9 @@ in case of questions and problems.
 
 
 
-We do not have strict requirements at this stage. You can pack 
-your artifacts simply in a tar ball, zip file, Virtual Machine or Docker image.
-You can also share artifacts via public services including GitHub, GitLab and BitBucket.
+We strongly recommend a Docker image, Dockerfile, Apptainer/Singularity image, VM image, locked Conda environment, or equivalent locked setup with all non-licensed dependencies preinstalled.
+You can also share artifacts via public services including GitHub, GitLab and BitBucket during review.
+For the Artifacts Available badge, the final public archive must have a Zenodo DOI.
 
 Please see [our submission guide](submission.md) for more details.
 
@@ -88,10 +97,9 @@ Please see [our submission guide](submission.md) for more details.
 
 
 Only in exceptional cases, i.e. when rare hardware or proprietary software/benchmarks are required,
-or VM image is too large or when you are not authorized to move artifacts outside your organization.
+or when a VM image is too large, or when you are not authorized to move artifacts outside your organization.
 In such case, you will need to send the access information 
-to the vachhabr at asu.edu via private email. 
-They will then pass this information to the evaluators.
+to the AE chairs privately. They will then pass this information to the evaluators.
 
 
 ### Can I share commercial benchmarks or software with evaluators?
@@ -99,9 +107,11 @@ They will then pass this information to the evaluators.
 
 
 Please check the license of your benchmarks, data sets and software. 
-In case you have any questions, try to find a free alternative. In fact, 
-we strongly suggest you provide a small subset of free benchmarks 
-and data sets to simplify the evaluation process to receive functionality badge.
+In case you have any questions, try to find a free alternative. In fact,
+we strongly suggest that you provide a small subset of free benchmarks
+and data sets to simplify the evaluation process for the Artifacts Evaluated - Functional badge.
+
+Do not include restricted commercial tools, license files, proprietary installers, foundry PDKs, or NDA-protected technology files in a public archive unless redistribution is allowed. Instead, document the exact tool, version, license assumptions, PDK name/release, required libraries or technology files, setup commands, smoke test, expected outputs, and whether an open-source proxy flow or open PDK is available.
 
 
 
@@ -109,7 +119,7 @@ and data sets to simplify the evaluation process to receive functionality badge.
 
 No, you don't have to and it may be impossible in the case of commercial artifacts.
 Nevertheless, we encourage you to make your artifacts publicly available upon publication, 
-for example, by including them in a permanent repository (required to receive the "artifact available" badge)
+for example, by archiving them on Zenodo with a DOI (required to receive the "artifact available" badge)
 to support open science as outlined in [our vision](http://dl.acm.org/citation.cfm?id=2618142).
 
 
@@ -140,11 +150,14 @@ of a user machine, validate your models or algorithm scalability,
 and report any unexpected behavior. 
 
 
+### How should I document LLM-based artifacts?
+
+If an LLM materially affects the paper results, document the exact model, settings, prompts, metrics, outputs, and cost assumptions. Open-weight or local models should be included when redistribution permits, archived with the artifact, or downloadable from a stable source with exact revision/hash and license information. Closed API models should list the provider, exact model ID, endpoint or service version if available, date range of experiments, access assumptions, and known model-drift limitations.
+
+Also provide inference settings such as temperature, top-p/top-k, maximum tokens, seed if supported, number of samples, stop sequences, and retry policy. Include prompts or prompt templates, few-shot examples, prompt-construction code, scoring scripts, raw or cached outputs, expected metric values, tolerance bands, and whether reviewers should run the full workflow, a smaller audit subset, or recompute metrics from cached outputs.
+
+
 ### Is there any page limit for my Artifact Evaluation Appendix?
 
 
 There is currently a 2 page limit for the AE Appendix in the camera-ready for MLCAD papers.
-
-
-
-

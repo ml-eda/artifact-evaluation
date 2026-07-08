@@ -1,4 +1,6 @@
-# Including badges in your camera-ready paper MLCAD2024
+# Including badges in your camera-ready paper for MLCAD 2026
+
+MLCAD 2026 will award only the Artifacts Available and Artifacts Evaluated - Functional badges. Please include only the badges awarded to your paper.
 
 ### Step 1. Download the PDF badges from below and add it to your latex folder
 
