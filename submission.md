@@ -59,10 +59,11 @@ and [AE FAQs](faq.md) before submitting artifacts for evaluation!
 You can find the examples of Artifact Appendices
 in the following [Artifact Appendix examples](https://cknow.io/reproduced-papers).
 
-Some checked MLCAD 2024 Artifact Appendices are also useful examples. These
-examples are historical; authors should still follow the current MLCAD 2026
-requirements above, including the Zenodo requirement for the Artifacts Available
-badge and the LLM-specific fields when applicable.
+Some checked [MLCAD 2024 artifact examples](examples/mlcad-2024/README.md)
+are also useful references. These examples are historical; authors should still
+follow the current MLCAD 2026 requirements above, including the Zenodo
+requirement for the Artifacts Available badge and the LLM-specific fields when
+applicable.
 
 * Paper "HLSFactory: A Framework Empowering High-Level Synthesis Datasets for Machine Learning and Beyond"
   * [Paper DOI](https://doi.org/10.1145/3670474.3685961)
